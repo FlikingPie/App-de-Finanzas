@@ -1,0 +1,249 @@
+APP DE CONTROL DE GASTOS PERSONALES
+Especificación del sistema
+
+1. OBJETIVO
+   Crear una aplicación de escritorio para registrar, analizar y controlar los gastos personales mensuales.
+   La aplicación permitirá almacenar gastos, analizarlos mediante estadísticas y ayudar al usuario a controlar su presupuesto.
+
+---
+
+2. TECNOLOGÍAS RECOMENDADAS
+
+Lenguaje:
+Python
+
+Interfaz gráfica:
+CustomTkinter
+
+Base de datos:
+SQLite
+
+Librerías adicionales:
+matplotlib
+pandas
+datetime
+json
+csv
+openpyxl
+
+---
+
+3. ESTRUCTURA DEL PROYECTO
+
+app_gastos/
+
+main.py
+database.py
+gastos.py
+categorias.py
+estadisticas.py
+presupuesto.py
+exportar.py
+configuracion.py
+utils.py
+
+database/
+gastos.db
+
+assets/
+iconos
+imagenes
+
+---
+
+4. ESTRUCTURA DE LA BASE DE DATOS
+
+Tabla: gastos
+
+id
+fecha
+categoria
+descripcion
+monto
+metodo_pago
+nota
+
+Tabla: categorias
+
+id
+nombre
+descripcion
+
+Tabla: presupuesto
+
+id
+categoria
+limite_mensual
+
+Tabla: configuracion
+
+id
+moneda
+tema
+formato_fecha
+
+---
+
+5. FUNCIONALIDADES PRINCIPALES
+
+REGISTRO DE GASTOS
+
+La aplicación debe permitir:
+
+Agregar gasto
+Editar gasto
+Eliminar gasto
+Ver lista de gastos
+Buscar gasto
+Filtrar por fecha
+Filtrar por categoría
+Filtrar por monto
+
+Cada gasto debe tener:
+
+Fecha
+Categoría
+Descripción
+Monto
+Método de pago
+Nota opcional
+
+---
+
+6. GESTIÓN DE CATEGORÍAS
+
+Crear categoría
+Editar categoría
+Eliminar categoría
+Listar categorías
+
+Ejemplos de categorías:
+
+Comida
+Transporte
+Educación
+Entretenimiento
+Salud
+Servicios
+Otros
+
+---
+
+7. DASHBOARD PRINCIPAL
+
+El panel principal debe mostrar:
+
+Gasto total del mes
+Gasto total del día
+Promedio de gasto diario
+Categoría con mayor gasto
+Número total de gastos registrados
+
+---
+
+8. ESTADÍSTICAS
+
+Gráfica de gastos por categoría
+Gráfica de gastos por día
+Gráfica de gastos por mes
+Historial de gastos
+Comparación entre meses
+
+---
+
+9. SISTEMA DE PRESUPUESTO
+
+Permitir definir presupuesto mensual.
+
+Ejemplo:
+
+Comida → 400
+Transporte → 200
+Entretenimiento → 150
+
+La aplicación debe:
+
+Mostrar porcentaje usado
+Mostrar advertencias
+Alertar cuando el presupuesto sea superado
+
+---
+
+10. EXPORTACIÓN DE DATOS
+
+Exportar gastos a:
+
+Excel
+CSV
+PDF
+
+También permitir:
+
+Importar datos desde CSV
+
+---
+
+11. HERRAMIENTAS
+
+Calculadora integrada
+Backup de base de datos
+Restaurar base de datos
+
+---
+
+12. CONFIGURACIÓN
+
+Modo oscuro / claro
+Moneda
+Formato de fecha
+Notificaciones
+
+---
+
+13. FUNCIONES AVANZADAS (OPCIONALES)
+
+Gastos recurrentes
+Predicción de gastos mensuales
+Clasificación automática de gastos
+Escaneo de recibos con OCR
+Sincronización en la nube
+
+---
+
+14. DISEÑO DE INTERFAZ
+
+La aplicación debe tener:
+
+Barra lateral de navegación
+
+Opciones principales:
+
+Dashboard
+Gastos
+Categorías
+Presupuesto
+Estadísticas
+Configuración
+
+Área central para mostrar contenido dinámico.
+
+---
+
+15. SEGURIDAD
+
+Validación de datos
+Prevención de registros vacíos
+Backup automático de la base de datos
+
+---
+
+16. FUTURAS MEJORAS
+
+Aplicación web
+Aplicación móvil
+Sincronización entre dispositivos
+Análisis financiero avanzado
+
+---
+
+FIN DEL DOCUMENTO
